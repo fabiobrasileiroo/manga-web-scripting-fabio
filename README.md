@@ -2,6 +2,9 @@
 
 A package to scrape images of manga chapters from [mangaonline.biz](https://mangaonline.biz).
 
+## Link lib npm
+[npmjs/manga-web-scripting-fabio](https://www.npmjs.com/package/manga-web-scripting-fabio)
+
 ## Installation
 
 To install the package, run:
