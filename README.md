@@ -10,7 +10,7 @@ A package to scrape images of manga chapters from [mangaonline.biz](https://mang
 To install the package, run:
 
 ```bash
-npm install manga-web-scripting
+npm i manga-web-scripting-fabio
 ```
 
 ### Usage with ES Modules
