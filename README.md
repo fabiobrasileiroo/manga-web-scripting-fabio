@@ -30,10 +30,9 @@ Example configuration using "type": "module":
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "manga-web-scripting": "^1.0.0"
+    "manga-web-scripting-fabio": "^1.2.0"
   }
 }
-
 ```
 
 ### How to Use?
