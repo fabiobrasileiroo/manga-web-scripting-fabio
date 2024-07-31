@@ -37,7 +37,7 @@ Example configuration using "type": "module":
 
 ### How to Use?
 ``` js
-import scrapeImages from 'manga-web-scripting';
+import scrapeImages from 'manga-web-scripting-fabio';
 
 (async () => {
   try {
@@ -50,3 +50,41 @@ import scrapeImages from 'manga-web-scripting';
   }
 })();
 ```
+
+# Video Scraping Functionality
+
+This documentation describes the video scraping functionality implemented in the project. The `scrapeVideos` function is responsible for extracting the video link from an anime episode page.
+
+## Description
+
+The `scrapeVideos` function makes an HTTP request to the episode page of an anime and extracts the video link embedded in the `iframe` on the page.
+
+## Function
+
+### `scrapeVideos(anime: string, ep: number)`
+
+**Parameters:**
+
+- `anime` (string): The name of the anime to be scraped.
+- `ep` (number): The episode number from which the video should be extracted.
+
+**Returns:**
+
+- `Promise<string>`: Returns a promise that resolves with the video URL if found. Otherwise, it throws an error.
+
+**Usage Example:**
+
+```javascript
+import { scrapeVideos } from 'manga-web-scripting-fabio';
+
+(async () => {
+  try {
+    const anime = 'naruto-shippuden';
+    const ep = 1; // Episode number
+
+    const videoUrl = await scrapeVideos(anime, ep);
+    console.log("Video URL: ", videoUrl);
+  } catch (error) {
+    console.error('Error:', error.message);
+  }
+})();

@@ -6,17 +6,13 @@ export const scrapeImages = async (anime, chapter) => {
   const chapterUrl = `https://mangaonline.biz/capitulo/${anime}-capitulo-${chapter}/`;
 
   try {
-    // Primeiro, faça a busca para verificar se o anime existe
     const { data: searchData } = await axios.get(searchUrl);
     const $search = cheerio.load(searchData);
 
-    //Verifique se há resultados na busca
-    const noResult = $search('.no-result').length > 0;
-    if (noResult) {
+    if ($search('.no-result').length > 0) {
       throw new Error('Anime not found');
     }
 
-    // Anime encontrado, prossiga para obter as imagens do capítulo
     const { data: chapterData } = await axios.get(chapterUrl);
     const $chapter = cheerio.load(chapterData);
 
@@ -33,3 +29,4 @@ export const scrapeImages = async (anime, chapter) => {
     throw new Error('Error while scraping images: ' + error.message);
   }
 };
+

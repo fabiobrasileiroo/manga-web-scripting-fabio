@@ -1,3 +1,4 @@
 import { scrapeImages } from './scrapeImage.js';
+import { scrapeVideos } from './scrapeVideos.js';
 
-export default scrapeImages;
+export { scrapeImages, scrapeVideos };
