@@ -37,7 +37,7 @@ Example configuration using "type": "module":
 
 ### How to Use?
 ``` js
-import scrapeImages from 'manga-web-scripting-fabio';
+import { scrapeImages } from 'manga-web-scripting-fabio';
 
 (async () => {
   try {
